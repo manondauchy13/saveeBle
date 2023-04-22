@@ -1,20 +1,18 @@
-package com.example.saveeble
+package com.example.saveeble.ble
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
-import com.example.saveeble.ble.BleScanActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.example.saveeble.R
 
-class MainActivity : AppCompatActivity() {
+class BleActivity : AppCompatActivity() {
+
     lateinit var boutonGoBlePage : Button
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_ble)
         boutonGoBlePage = findViewById(R.id.buttonBluetooth)
         val intent = Intent(this, BleScanActivity::class.java)
 
@@ -22,6 +20,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
 }
