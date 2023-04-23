@@ -48,7 +48,7 @@ class BleScanActivity : AppCompatActivity() {
                 }
 
             bluetoothAdapter != null ->
-                askBluetoohPermission()
+                askBluetoothPermission()
             else -> {
                 displayBLEUnavailable()
             }
@@ -152,7 +152,7 @@ class BleScanActivity : AppCompatActivity() {
         binding.scanBLEPogressBar.isIndeterminate = false
     }
 
-    private fun askBluetoohPermission() {
+    private fun askBluetoothPermission() {
         val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
         if (ActivityCompat.checkSelfPermission(
                 this,
